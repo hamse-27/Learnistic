@@ -84,6 +84,7 @@ class loginActivity : AppCompatActivity() {
             startActivity(Intent(this@loginActivity, RegisterActivity::class.java))
             finish()
 
+
         }
 
 

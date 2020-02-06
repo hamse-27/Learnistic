@@ -2,9 +2,6 @@ package com.example.learnistic.view
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.net.Uri
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.GridLayout.HORIZONTAL
@@ -20,6 +17,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_home.imageView1
+import kotlinx.android.synthetic.main.activity_profile.*
 
 
 class HomeActivity : AppCompatActivity() {
@@ -29,12 +28,14 @@ class HomeActivity : AppCompatActivity() {
     lateinit var firebaseAuth: FirebaseAuth
     private lateinit var mAuth: FirebaseAuth
     private lateinit var fstore: FirebaseFirestore
+   lateinit var homeActivity: HomeActivity
 
 
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
 
         recyclerview = findViewById(R.id.courses_recyclerview)
         recyclerview1 = findViewById(R.id.user_course_recyclerView)
@@ -96,12 +97,10 @@ class HomeActivity : AppCompatActivity() {
         textView2.setText(email)
 
 
-
-        sign_out_button.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-
-            startActivity(Intent(this@HomeActivity, loginActivity::class.java))
+        imageView1.setOnClickListener {
+            startActivity(Intent(this@HomeActivity, ProfileActivity::class.java))
         }
+
     }
 
 
