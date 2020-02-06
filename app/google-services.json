@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "911615880430",
+    "firebase_url": "https://learnistic-452ed.firebaseio.com",
+    "project_id": "learnistic-452ed",
+    "storage_bucket": "learnistic-452ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911615880430:android:b8b32f2fc53df7565417ff",
+        "android_client_info": {
+          "package_name": "com.example.learnistic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911615880430-salrrtehbda9f98no3tat66fpej48lla.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.learnistic",
+            "certificate_hash": "ce28bbc0c57f0486b395f9c692e69664abf672fe"
+          }
+        },
+        {
+          "client_id": "911615880430-q5cd47etns07d18avmu7ommd49v2r513.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEZXztxmblj1xoT9WYRcPAWt65KblWx70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911615880430-p1og1hermk75c2uv66i26iom9jbcqr2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
