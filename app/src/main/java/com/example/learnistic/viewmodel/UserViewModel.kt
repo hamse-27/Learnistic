@@ -4,15 +4,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.learnistic.Repository.UserRepository
+import com.example.learnistic.model.Users
+import com.google.firebase.firestore.auth.User
 
 
+abstract class UserViewModel : ViewModel(){
+
+    private lateinit var repo: UserRepository
+    private var user: MutableLiveData<List<Users>>? = null
 
 
-class UserViewModel : ViewModel(){
-
-    private var user: MutableLiveData<List<UserRepository>>? = null
-
-    fun getUser(): MutableLiveData<List<UserRepository>>? {
+    fun getUser(): MutableLiveData<List<Users>>? {
         if (user == null) {
             user = MutableLiveData()
             loadArticles()
@@ -22,7 +24,7 @@ class UserViewModel : ViewModel(){
 
     private fun loadArticles() { // do async operation to fetch articles  private void loadArticles() {
         // do async operation to fetch articles
-        user
+       repo.userProfile
     }
 
 }

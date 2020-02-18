@@ -4,16 +4,23 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.activity.viewModels
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.example.learnistic.R
+import com.example.learnistic.Repository.UserRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_home.imageView1
 import kotlinx.android.synthetic.main.activity_profile.*
 import com.example.learnistic.view.HomeActivity
+import com.example.learnistic.viewmodel.UserViewModel
 
 class ProfileActivity : AppCompatActivity() {
 
     private lateinit var mAuth: FirebaseAuth
+    lateinit var model:UserViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +28,9 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
 
+        model.getUser()?.observe(this, Observer<List<UserRepository>>{
+
+        })
 
         window.setFlags(
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
